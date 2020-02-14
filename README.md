@@ -1,2 +1,2 @@
-# flask-calc-exercises
- flask exercises
+# flask-greet-calc-exercises
+ Flask exercises
