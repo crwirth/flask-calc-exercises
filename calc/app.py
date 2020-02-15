@@ -41,4 +41,18 @@ def division():
     return f"The result is: {div_result}"
 
     
+operators = {
+    "add": add,
+    "sub": sub,
+    "mult": mult,
+    "div": div,
+}
 
+@app.route('/math/<operator>')
+def calc_math(operator):
+    a = int(request.args.get("a"))
+    b = int(request.args.get("b"))
+
+    foo = operators[operator](a, b)
+
+    return f"The result is: {foo}"
